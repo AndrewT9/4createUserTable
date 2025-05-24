@@ -1,0 +1,38 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{ col.label }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users$ | async; trackBy: trackById">
+      <td *ngFor="let col of columns">
+        <ng-container [ngSwitch]="col.key">
+          <ng-container *ngSwitchCase="'active'">
+            <button (click)="toggleActive(user.id)">
+              {{ user.active ? "Active" : "Inactive" }}
+            </button>
+          </ng-container>
+          <ng-container *ngSwitchDefault>
+            {{ user[col.key] }}
+          </ng-container>
+        </ng-container>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button [disabled]="!(canAdd$ | async)" (click)="openAddModal()">
+  Add User
+</button>
+
+<div class="modal-backdrop" *ngIf="showAddModal" (click)="closeModal()"></div>
+
+<div class="modal" *ngIf="showAddModal">
+  <app-user-add
+    (created)="onUserCreated($event)"
+    (cancel)="closeModal()"
+  ></app-user-add>
+</div>

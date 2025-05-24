@@ -1,0 +1,22 @@
+<div class="modal">
+  <h2>Add User</h2>
+  <form [formGroup]="form">
+    <label>
+      Name:
+      <input formControlName="name" />
+    </label>
+
+    <div class="error" *ngIf="nameCtrl.hasError('notUnique') && nameCtrl.touched">
+      Name already taken.
+    </div>
+
+    <button
+      type="button"
+      (click)="create()"
+      [class.active]="form.valid"
+      [disabled]="form.invalid"
+    >
+      Create
+    </button>
+  </form>
+</div>
