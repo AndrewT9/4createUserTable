@@ -2,11 +2,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserAddComponent } from '../user-add/user-add.component';
-import { User } from '../../store/user.model';
-import { UserService } from '../../store/user.service';
-import { UserQuery } from '../../store/user.query';
 import { Observable } from 'rxjs';
-import { COLUMNS_TITLE } from '../../utils/column.data';
+import { UserQuery } from '../../../store/user.query';
+import { UserService } from '../../../store/user.service';
+import { User } from '../../../store/user.model';
+import { COLUMNS_TITLE } from '../../../utils/column.data';
+
 
 @Component({
   selector: 'app-user-list',

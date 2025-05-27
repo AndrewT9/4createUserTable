@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { UserListComponent } from "./users/user-list/user-list.component";
+import { UserListComponent } from './components/users/user-list/user-list.component';
+
 
 @Component({
   selector: 'app-root',

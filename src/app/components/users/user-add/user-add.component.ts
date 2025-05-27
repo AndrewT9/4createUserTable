@@ -12,8 +12,8 @@ import {
   FormGroup,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { uniqueNameValidator } from '../../utils/uniqueName.validator';
-import { NameService } from '../../services/shared.service';
+import { NameService } from '../../../services/shared.service';
+import { uniqueNameValidator } from '../../../utils/uniqueName.validator';
 
 @Component({
   selector: 'app-user-add',
