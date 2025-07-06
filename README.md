@@ -2,7 +2,7 @@
 
 A simple Angular application for managing a list of users with basic CRUD operations and state management via Akita.
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 # 🚀 Features
 
