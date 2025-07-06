@@ -31,7 +31,7 @@ Language: TypeScript
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/user-management-app.git
+git clone https://github.com/AndrewT9/4createUserTable.git
 ```
 
 ```bash
@@ -46,8 +46,8 @@ Navigate to http://localhost:4200 in your browser.
 
 # 🛠 Usage
 
-Click Add User to open the modal and create a new user.
-
 Use Active/Inactive buttons to toggle user status.
 
-Click Delete to remove a user.
+Click Add User to open the modal and create a new user.
+
+User mustn't duplicate.
